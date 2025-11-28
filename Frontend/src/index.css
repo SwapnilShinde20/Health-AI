@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* HealthGuard AI - Glassmorphic Healthcare Dashboard Theme */
+    --background: 222 47% 11%;  /* #0f172a - Navy background */
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 18%;  /* #1e293b - Glassmorphic card */
+    --card-foreground: 210 40% 98%;
+    --card-border: 188 100% 50% / 0.2;  /* Cyan border with transparency */
+
+    --popover: 215 25% 18%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 188 95% 54%;  /* #22d3ee - Vibrant Cyan */
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 215 25% 22%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 22%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 188 95% 54%;
+    --accent-foreground: 222 47% 11%;
+
+    --success: 142 71% 45%;  /* Green for surplus */
+    --success-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;  /* Red for critical alerts */
+    --destructive-foreground: 210 40% 98%;
+
+    --warning: 45 93% 58%;  /* Yellow for warnings */
+    --warning-foreground: 222 47% 11%;
+
+    --info: 217 91% 60%;  /* Blue for info */
+    --info-foreground: 210 40% 98%;
+
+    --border: 215 25% 25%;
+    --input: 215 25% 22%;
+    --ring: 188 95% 54%;
+
+    --radius: 1rem;
+
+    /* Chart colors */
+    --chart-1: 188 95% 54%;  /* Cyan primary */
+    --chart-2: 142 71% 45%;  /* Green success */
+    --chart-3: 0 84% 60%;    /* Red critical */
+    --chart-4: 45 93% 58%;   /* Yellow warning */
+    --chart-5: 271 81% 56%;  /* Purple accent */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .stagger-1 {
+    animation-delay: 0.1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-primary/20 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-primary/40 hover:shadow-2xl;
+  }
+
+  .resource-card {
+    @apply glass-card cursor-pointer;
+  }
+
+  .chart-container {
+    @apply glass-card;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
