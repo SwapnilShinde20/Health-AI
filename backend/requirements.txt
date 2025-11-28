@@ -1,0 +1,42 @@
+# --------------------
+# Core Backend Framework
+# --------------------
+fastapi==0.115.2
+uvicorn==0.30.1
+
+# --------------------
+# Database and ORM
+# --------------------
+sqlalchemy==2.0.32
+pymysql==1.1.0
+
+# --------------------
+# Authentication & Security
+# --------------------
+python-jose==3.3.0
+passlib[bcrypt]==1.7.4
+
+# --------------------
+# Machine Learning & Forecasting
+# --------------------
+prophet==1.1.5
+pandas==2.2.3
+numpy==1.26.4
+joblib==1.4.2
+scikit-learn==1.5.1
+
+# --------------------
+# Data Visualization (optional for testing)
+# --------------------
+matplotlib==3.9.2
+
+# --------------------
+# Scheduling (optional - for auto forecasting)
+# --------------------
+apscheduler==3.10.4
+
+# --------------------
+# Environment & Utility
+# --------------------
+python-dotenv==1.0.1
+requests==2.32.3
